@@ -32,17 +32,10 @@ Compiling
 Usage
 -----
 
-After compiling, simply run the executable:
+After compiling, make this alias in your bashrc:
 
-    paleofetch
-
-By default, `paleofetch` will cache certain  information (in `$XDG_CACHE_HOME/paleofetch`)
-to speed up subsequent calls. To ignore the contents of the cache (and repopulate it), run
-
-    paleofetch --recache
-
-The cache file can safely be removed at any time, paleofetch will repopulate it
-if it is absent.
+    alias paleofetch='./paleofetch'
+    
 
 Configuration
 -------------
@@ -69,13 +62,10 @@ which function paleofetch will call display. Current available getter functions 
 * `get_host`: Prints the model of computer
 * `get_kernel`: Prints the version of the linux kernel
 * `get_uptime`: Shows how long linux has been running
-* `get_packages`: Shows how many packages you have installed. Currently only works for pacman.
 * `get_shell`: Shows which shell you are using
 * `get_resolution`: Prints your screen resolution
 * `get_terminal`: Prints the name of your current terminal
 * `get_cpu`: Prints the name of your CPU, number of cores, and maximum frequency
-* `get_gpu1`, `get_gpu2`: Print the GPU on your system. If you don't have both integrated graphics and an external GPU, `get_gpu2` will likely be blank
-* `get_gpu`: (Tries to) print your current GPU
 * `get_colors1`, `get_colors2`: Prints the colors of your terminal
 
 To include a blank line between entries, put `SPACER \` between the two lines
@@ -100,3 +90,5 @@ FAQ
 Q: Do you really run neofetch every time you open a terminal?  
 A: Yes, I like the way it looks and like that it causes my prompt to start midway
 down the screen. I do acknowledge that the information it presents is not actually useful.
+Q: Is this a bad remix that is borked and does not work straight?
+A: Yes, but at least it works.
